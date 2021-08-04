@@ -1,7 +1,7 @@
 const { Country, Activity } = require('../db');
 
 const postActivity = async (req, res) => {
-    const { name, difficulty, duration, season, id } = req.body;
+    const { name, difficulty, duration, season, idCountry } = req.body;
     const validate = await Activity.findOne({
         where: {
             name: name
@@ -16,16 +16,16 @@ const postActivity = async (req, res) => {
         });
         const checkCountry = await Country.findAll({
             where: {
-                id: id
+                id: idCountry
             }
         });
         const showActivity = await createActivity.addCountries(checkCountry);
-
+        
         return res.send(showActivity);
-    }
+    } 
     const checkCountry = await Country.findAll({
         where: {
-            id: id
+            id: idCountry
         }
     });
     const showActivity = await createActivity.addCountries(checkCountry);
