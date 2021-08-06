@@ -2,10 +2,8 @@ const axios = require('axios');
 const { BASE_URL } = process.env;
 const { Country } = require('../db')
 
-const url = BASE_URL
-
 const getCountriesToDb = async () => {
-    const getCountries = await axios.get(url);
+    const getCountries = await axios.get(BASE_URL);
     const allCountries = getCountries.data;
     try {
         const modelCountries = allCountries.map((el) => {
