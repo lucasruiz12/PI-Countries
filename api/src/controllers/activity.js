@@ -22,15 +22,8 @@ const postActivity = async (req, res) => {
         const showActivity = await createActivity.addCountries(checkCountry);
         
         return res.send(showActivity);
-    } 
-    const checkCountry = await Country.findAll({
-        where: {
-            id: idCountry
-        }
-    });
-    const showActivity = await createActivity.addCountries(checkCountry);
-
-    return res.send(showActivity);
+    }
+    return res.send(`Ya creaste la actividad ${name}`)
 }
 
 module.exports = { postActivity }
