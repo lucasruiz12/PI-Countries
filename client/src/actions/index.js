@@ -50,7 +50,7 @@ export function orderPopReverse() {
     return { type: 'ORDER_POP_REVERSE' }
 }
 
-export const orderContinent = (payload) => {
+export function orderContinent (payload) {
     return {
         type: 'ORDER_CONTINENT',
         payload

@@ -1,4 +1,4 @@
-import { orderAZ, orderContinent, orderPop, orderPopReverse, orderZA } from "../actions";
+import {ordAZ, ordPop} from '../components/Orders/orders'
 
 const initialState = {
     countries: [],
@@ -25,22 +25,22 @@ const rootReducer = (state = initialState, action) => {
         case 'ORDER_AZ':
             return {
                 ...state,
-                countries: state.countries.slice().sort(orderAZ)
+                countries: state.countries.slice().sort(ordAZ)
             }
         case 'ORDER_ZA':
             return {
                 ...state,
-                countries: state.countries.slice().sort(orderZA).reverse()
+                countries: state.countries.slice().sort(ordAZ).reverse()
             }
         case 'ORDER_POP':
             return {
                 ...state,
-                countries: state.countries.slice().sort(orderPop)
+                countries: state.countries.slice().sort(ordPop)
             }
         case 'ORDER_POP_REVERSE':
             return {
                 ...state,
-                countries: state.countries.slice().sort(orderPopReverse).reverse()
+                countries: state.countries.slice().sort(ordPop).reverse()
             }
         case 'ORDER_CONTINENT':
             return {
@@ -51,12 +51,11 @@ const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 countries: state.countries.filter((el) => {
-                    return el.activities.some((e) => e.name === action.payload)
+                    return el.activities.some((el) => el.name === action.payload)
                 })
             }
         default:
             return state;
     }
 }
-
 export default rootReducer;

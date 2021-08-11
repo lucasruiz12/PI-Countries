@@ -7,15 +7,15 @@ const Activity = ({ activities, country }) => {
     if (activities && activities.length > 0) {
         return (
             <div>
-                <h3>Activities in {country}</h3>
+                <h3>Actividades para hacer en {country}</h3>
                 <table className={style.activities}>
 
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Duration (hs)</th>
-                            <th>Difficulty</th>
-                            <th>Season</th>
+                            <th>Nombre</th>
+                            <th>Duración (en horas)</th>
+                            <th>Dificultad</th>
+                            <th>Estación</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -32,7 +32,7 @@ const Activity = ({ activities, country }) => {
             </div>
         )
     } else {
-        return <Link className ={style.link} to='/activities'><h3>Activities for this countries!</h3></Link>
+        return <Link className ={style.link} to='/activities'><h3>Actividades para este país!</h3></Link>
     }
 }
 
