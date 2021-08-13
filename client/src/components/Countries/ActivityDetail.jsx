@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import style from './activityDetail.module.css'
 
-//importar style
-
+//importar 
 const Activity = ({ activities, country }) => {
     if (activities && activities.length > 0) {
         return (
@@ -32,7 +32,7 @@ const Activity = ({ activities, country }) => {
             </div>
         )
     } else {
-        return <Link className ={style.link} to='/activities'><h3>Actividades para este país!</h3></Link>
+        return <Link className ={style.link} to='/activities'><h3>Actividades en este país:</h3></Link>
     }
 }
 

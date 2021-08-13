@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { getCountries, getName } from '../../actions';
+import style from './searchBar.module.css';
 
 const SearchBar = () => {
     const [input, setInput] = useState('');
@@ -22,14 +23,14 @@ const SearchBar = () => {
             <input
                 className={style.inputText}
                 type="text"
-                placeholder="Search by name"
+                placeholder="Buscar por nombre..."
                 name="input"
-                autocomplete="off"
+                autoComplete="off"
                 onChange={(el) => inputHandler(el)}
             />
             <div>
                 <button className={style.buttonSearch} onClick={() => onClickHandler()}>
-                    Search 🔎
+                    Buscar 🔎
                 </button>
                 <button className={style.buttonSearch} onClick={() => homeHandler()}>
                     Reset 🔁

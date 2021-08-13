@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { createCountry, getName } from '../../actions';
+import { createActivity, getName } from '../../actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { SmallCountry } from './SmallCountry';
-import style from './form.module.css';
+import style from './activityForm.module.css';
 import { Link } from 'react-router-dom';
 
 const ActivityForm = () => {
@@ -90,7 +90,7 @@ const ActivityForm = () => {
     }
 
     if (form) {
-      dispatch(createCountry(dataForm))
+      dispatch(createActivity(dataForm))
         .then(() => stateReset())
         .then(() => alert("Actividad agregada 😎"));
     } else {
@@ -189,12 +189,12 @@ const ActivityForm = () => {
               className={style.countries1}
               type="text"
               autocomplete="off"
-              placeholder="find your country..."
+              placeholder="Encuentra tu país!"
               onChange={submitInputName}
             />
           </div>
           <div>
-            <input className={style.btn1} type="submit" value="Add activity" />
+            <input className={style.btn1} type="submit" value="Agregar ➕" />
           </div>
         </form>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-/* IMPORTAR UN STYLE DE MODULE.CSS */
+import style from './countryCard.module.css';
 
 
 const CountryCard = ({ name, id, img, continent, activities }) => {

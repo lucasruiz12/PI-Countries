@@ -8,7 +8,6 @@ import style from "./countryId.module.css";
 const CountryId = () => {
     const countryDetail = useSelector((state) => state.countryDetail);
     const dispatch = useDispatch();
-
     let { id } = useParams();
     useEffect(() => {
         dispatch(getDetail(id));
@@ -17,7 +16,7 @@ const CountryId = () => {
     return (
         <div className={style.all}>
             <button className={style.butn}>
-                <Link className={style.link} to="/countries" >Volver atrás ◀</Link></button>
+                <Link className={style.link} to="/home" >Volver atrás ◀</Link></button>
             <div className={style.countryContainer}>
                 <h1>{countryDetail.name}</h1>
                 <h3>{countryDetail.id}</h3>

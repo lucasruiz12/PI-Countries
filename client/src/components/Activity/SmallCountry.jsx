@@ -1,6 +1,5 @@
 import style from './smallCountry.module.css'
 
-
 export const SmallCountry = ({ name, img, id }) => {
     return (
         <div>

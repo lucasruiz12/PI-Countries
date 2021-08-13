@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'reaect';
+import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import style from '../Nav/navBar.module.css';
+import style from './nav.module.css';
 import { connect, useDispatch } from 'react-redux';
 import {
     getCountries,
@@ -10,8 +10,8 @@ import {
     createActivity,
     orderPop,
     orderPopReverse,
-} from "../../actions/actions";
-import SearchBar from "../Search/SearchBar.jsx";
+} from '../../actions';
+import SearchBar from '../SearchBar/SearchBar';
 const NavBar = ({
     orderAZ,
     getCountries,
@@ -35,7 +35,7 @@ const NavBar = ({
                 }, 20);
             }
         }
-    }, [continent]);
+    }, [continent, dispatch]);
 
     useEffect(() => {
         if (order === "all") getCountries();
@@ -81,7 +81,11 @@ const NavBar = ({
             <div className={style.filtersContainer}>
                 <p>Filtrar por Continente</p>
                 <div className={style.selectContainer}>
-                    <select onChange={(event) => setContinent(event.target.value)}>
+                    <select onChange={(event) => {
+                        console.log(event.target.value);
+                        setContinent(event.target.value)}
+                    }>
+
                         <option value="all">Todos</option>
                         <option value="Americas">Americas</option>
                         <option value="Europe">Europe</option>
@@ -103,7 +107,7 @@ const NavBar = ({
                         onChange={activityHandler}
                     />
                     <button className={style.butn} onClick={searchActHandler}>
-                        Buscar
+                        Buscar 🔎
                     </button>
                 </form>
             </div>
