@@ -12,15 +12,15 @@ const ActivityForm = () => {
   const dispatch = useDispatch();
 
   let nextPage = () => {
-    if (countries.length <= currentPage + 16) {
+    if (countries.length <= currentPage + 9) {
       setCurrentPage(currentPage);
-    } else setCurrentPage(currentPage + 16);
+    } else setCurrentPage(currentPage + 9);
   };
   let prevPage = () => {
     if (currentPage < 9) {
       setCurrentPage(0);
     } else {
-      setCurrentPage(currentPage - 16);
+      setCurrentPage(currentPage - 9);
     }
   };
 
@@ -28,7 +28,7 @@ const ActivityForm = () => {
     setCurrentPage(0);
   }, [countries]);
 
-  const filtered = countries.slice(currentPage, currentPage + 16);
+  const filtered = countries.slice(currentPage, currentPage + 9);
 
   const [dataForm, setDataForm] = useState({
     name: "",
@@ -156,7 +156,7 @@ const ActivityForm = () => {
               <option value={13}>13</option>
               <option value={14}>14</option>
               <option value={15}>15</option>
-              <option value={16}>16</option>
+              <option value={9}>9</option>
               <option value={17}>17</option>
               <option value={18}>18</option>
               <option value={19}>19</option>
