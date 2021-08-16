@@ -9,20 +9,21 @@
     }
     
     .countryContainer{
-        background-color: transparent;
+        background-color: black;
         border: 1px black solid;
         border-radius: 4%;
         margin: 2em;
         width: 20%;
         border: none;
         color: white;
-        
+        opacity: 85%;
         border: 1px solid rgba(255, 255, 255, 0.548);
     
     
     }
     .countryContainer:hover{
-        background-color: rgba(105, 105, 105, 0.15);
+        transform: scale(1.1);
+        opacity: 100%;
     }
     .imgContainer img{
         width: 30%;

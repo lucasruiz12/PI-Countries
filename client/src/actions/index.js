@@ -30,7 +30,7 @@ export function getName(name) {
             })
         } catch (error) {
             console.log(error);
-        }
+        };
     }
 }
 
@@ -48,22 +48,27 @@ export function orderPop() {
 
 export function orderPopReverse() {
     return { type: 'ORDER_POP_REVERSE' }
-}
+};
 
 export function orderContinent(payload) {
     return {
         type: 'ORDER_CONTINENT',
         payload
-    }
+    };
+};
+
+export function showActivity(payload){
+    return {
+        type: 'SHOW_ACTIVITY',
+        payload
+    };
 }
 
 export function createActivity(activity) {
-    console.log('Creando la activity: ', activity)
     return async function () {
         try {
-            console.log("Body del form y activity");
-            const newActivity = await axios.get('http://localhost:3001/activity/')
-            console.log('Actividad creada 😁. Creaste: ', newActivity)
+            const newActivity = await axios.post('http://localhost:3001/activity/', activity)
+            console.log('Creando la activity: ', newActivity)
         } catch (error) {
             console.log(error);
         }

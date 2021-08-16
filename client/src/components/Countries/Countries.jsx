@@ -28,8 +28,8 @@ const Countries = () => {
 
     return (
         <div>
-            <button onClick={previousPage} className={style.btn}>{'<='}</button>
-            <button onClick={nextPage} className={style.btn}>{'=>'}</button>
+            <button onClick={previousPage} className={style.btn}>{'⬅'}</button>
+            <button onClick={nextPage} className={style.btn}>{'➡'}</button>
             <div className={style.grid}>
                 {filterCountries.map((el) => (
                         <CountryCard

@@ -11,13 +11,13 @@
     margin: 1em;
     width: 16%;
     border: solid 1px #fafafa70;
-    background-color: rgba(255, 255, 255, 0.198);
+    background-color: black;
     margin-left: 125px;
-    
-    
+    opacity: 85%;
 }
 .countryContainer:hover{
-    background-color: rgba(105, 105, 105, 0.267);
+    opacity: 100%;
+    transform: scale(1.1);
 }
 .imgContainer img{
     width: 150px;

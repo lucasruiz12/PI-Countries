@@ -72,7 +72,7 @@ const ActivityForm = () => {
       [el.target.name]: dataForm[el.target.name].concat(el.target.value),
     });
 
-    alert("Country Added");
+    alert("País agregado! 😊");
   };
 
   useEffect(() => {
@@ -101,9 +101,8 @@ const ActivityForm = () => {
   return (
     <div>
       <div className={style.navBarContainer}>
-        <Link to="/countries" className={style.homelink}>
-          <p>Welcome LOGO</p>
-        </Link>
+      <button className={style.butn}>
+                <Link className={style.link} to="/home" >Volver atrás ◀</Link></button>
         <form className={style.navBarContainer} onSubmit={(e) => submitForm(e)}>
           <div>
             <input
@@ -156,7 +155,7 @@ const ActivityForm = () => {
               <option value={13}>13</option>
               <option value={14}>14</option>
               <option value={15}>15</option>
-              <option value={9}>9</option>
+              <option value={16}>16</option>
               <option value={17}>17</option>
               <option value={18}>18</option>
               <option value={19}>19</option>
@@ -201,11 +200,11 @@ const ActivityForm = () => {
 
       <button onClick={prevPage} className={style.butn}>
         {" "}
-        {"<"}{" "}
+        {"⬅"}{" "}
       </button>
       <button onClick={nextPage} className={style.butn}>
         {" "}
-        {">"}{" "}
+        {"➡"}{" "}
       </button>
 
       <div className={style.order}>

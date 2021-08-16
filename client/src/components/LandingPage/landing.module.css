@@ -1,7 +1,7 @@
 body {
   background-image: url('D:\Ruiz\Desktop\HENRY\Alumno\5. Trabajo individual\3. Fecha 18 de agosto\PI-Countries\client\src\images\LandingPage.png');
   background-repeat: no-repeat;
-  background-size: 106%;
+  background-size: 115%;
   background-position-x: initial;
   background-position-y: initial;
 }
@@ -18,14 +18,13 @@ body {
 .button {
   border-radius: 50px;
   height: 50px;
-  background-color: rgb(231, 35, 0);
   shape-outside: none;
   margin-top: 50px;
+/*   background-image: ; */
 }
 
 .button:hover {
-  background-color: rgba(230, 169, 77, 0);
-  transition: 300ms;
+  transform: scale(1.1);
 }
 
 .link:hover {

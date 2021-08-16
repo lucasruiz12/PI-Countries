@@ -148,12 +148,14 @@
   margin: 1em;
   width: 16%;
   border: solid 1px #fafafa70;
-  background-color: rgba(255, 246, 246, 0.061);
+  background-color: black;
   margin-left: 120px;
+  opacity: 85%;
 }
 
 .countryCont:hover {
-  background-color: rgba(255, 255, 255, 0.404);
+  opacity: 100%;
+  transform: scale(1.1);
 }
 .order {
   display: flex;

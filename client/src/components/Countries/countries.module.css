@@ -16,13 +16,12 @@ text-align:center;
 transition: all 0.2s;
 font-size: larger;
 color: white;
-background-color: transparent;
+background-color: black;
 }
 
 .btn:hover{
-    color: #000000;
-    background-color: #8a8a8a;
-    }
+    transform: scale(1.1);
+}
 
 .allcountries{
     display: flex;

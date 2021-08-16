@@ -10,7 +10,8 @@ import {
     createActivity,
     orderPop,
     orderPopReverse,
-} from '../../actions';
+    showActivity,
+} from '../../actions/';
 import SearchBar from '../SearchBar/SearchBar';
 const NavBar = ({
     orderAZ,
@@ -25,6 +26,7 @@ const NavBar = ({
     const [continent, setContinent] = useState("");
     const [activity, setActivity] = useState("");
     const dispatch = useDispatch();
+    
 
     useEffect(() => {
         if (continent) {
@@ -32,7 +34,7 @@ const NavBar = ({
             if (continent !== "all") {
                 setTimeout(() => {
                     dispatch(orderContinent(continent));
-                }, 20);
+                }, 100);
             }
         }
     }, [continent, dispatch]);
@@ -47,7 +49,6 @@ const NavBar = ({
 
     const activityHandler = (el) => {
         el.preventDefault();
-
         setActivity(el.target.value);
     };
 
@@ -55,7 +56,7 @@ const NavBar = ({
         el.preventDefault();
         getCountries();
         setTimeout(() => {
-            dispatch(createActivity(activity));
+            dispatch(showActivity(activity));
         }, 200);
 
         console.log(activity);
@@ -64,9 +65,8 @@ const NavBar = ({
 
     return (
         <div className={style.navBarContainer}>
-            <Link to="/" className={style.link}>
-                <p>Welcome LOGO</p>
-            </Link>
+            <button className={style.butn}>
+                <Link to="/" >Volver atrás ◀</Link></button>
             <div className={style.sortContainer}>
                 <p>Ordenar por:</p>
                 <select onChange={(event) => setOrder(event.target.value)}>
