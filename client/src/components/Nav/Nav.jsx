@@ -105,7 +105,7 @@ const NavBar = ({
                 <form>
                     <input
                         className={style.inputText}
-                        placeholder="Busca actividad"
+                        placeholder="Busca actividad..."
                         type="text"
                         autocomplete="off"
                         value={activity}
@@ -116,7 +116,6 @@ const NavBar = ({
                     </button>
                 </form>
             </div>
-
             <button className={style.butn2}>
                 <Link to="/activities" className={style.link2}>CREA UNA ACTIVIDAD TURÍSTICA</Link>
             </button>

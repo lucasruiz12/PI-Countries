@@ -22,7 +22,7 @@ const Activity = ({ activities }) => {
             </div>
         )
     } else {
-        return <Link className={style.link} to='/activities'><h3>Actividades en este país:</h3></Link>
+        return <h3>¡No hay actividades en este país!<Link className={style.link} to='/activities'><p>▶ Click aquí para agregar ◀</p></Link></h3>
     }
 }
 

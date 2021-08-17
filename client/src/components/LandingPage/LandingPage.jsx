@@ -7,7 +7,7 @@ export function LandingPage() {
         <div>
             <h2 className={style.title}>BIENVENIDO - WELCOME - 欢迎 - BEM VINDO - いらっしゃいませ - BENVENUTO - BIENVENEU - ברוך הבא</h2>
             <Link to='/home'>
-                <button className={style.button}>Ingresar</button>
+                <button className={style.button}><h3>🛫 LISTO PARA DESPEGAR 🛫</h3></button>
             </Link>
         </div>
     )
