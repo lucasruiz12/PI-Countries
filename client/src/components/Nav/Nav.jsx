@@ -34,7 +34,7 @@ const NavBar = ({
             if (continent !== "all") {
                 setTimeout(() => {
                     dispatch(orderContinent(continent));
-                }, 100);
+                }, 200);
             }
         }
     }, [continent, dispatch]);

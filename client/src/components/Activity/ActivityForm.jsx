@@ -124,6 +124,7 @@ const ActivityForm = () => {
               id="difficulty"
               onChange={setDataHandler}
             >
+              <option value={''}></option>
               <option value={1}>1</option>
               <option value={2}>2</option>
               <option value={3}>3</option>
@@ -140,6 +141,7 @@ const ActivityForm = () => {
               id="duration"
               onChange={setDataHandler}
             >
+              <option value={''}></option>
               <option value={1}>1</option>
               <option value={2}>2</option>
               <option value={3}>3</option>
@@ -175,6 +177,7 @@ const ActivityForm = () => {
               id="season"
               onChange={setDataHandler}
             >
+              <option value={''}></option>
               <option value="Autumn">Autumn</option>
               <option value="Winter">Winter</option>
               <option value="Spring">Spring</option>
