@@ -2,37 +2,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import style from './activityDetail.module.css'
 
-//importar 
-const Activity = ({ activities, country }) => {
+const Activity = ({ activities }) => {
     if (activities && activities.length > 0) {
         return (
             <div>
-                <h3>Actividades para hacer en {country}</h3>
+                <h2>-----------------------</h2>
+                <h3>Actividades en este país:</h3>
                 <table className={style.activities}>
-
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Duración (en horas)</th>
-                            <th>Dificultad</th>
-                            <th>Estación</th>
+                    {activities && activities.map((el) => (
+                        <tr key={el.id}>
+                            <h5>Nombre: {el.name}</h5>
+                            <h5>Duración (en horas): {el.duration}</h5>
+                            <h5>Dificultad: {el.difficulty}</h5>
+                            <h5>Estación: {el.season}</h5>
+                            <h3>-----------</h3>
                         </tr>
-                    </thead>
-                    <tbody>
-                        {activities && activities.map((el) => (
-                            <tr key={el.id}>
-                                <td>{el.name}</td>
-                                <td>{el.duration}</td>
-                                <td>{el.difficulty}</td>
-                                <td>{el.season}</td>
-                            </tr>
-                        ))}
-                    </tbody>
+                    ))}
                 </table>
             </div>
         )
     } else {
-        return <Link className ={style.link} to='/activities'><h3>Actividades en este país:</h3></Link>
+        return <Link className={style.link} to='/activities'><h3>Actividades en este país:</h3></Link>
     }
 }
 

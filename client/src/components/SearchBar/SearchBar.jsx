@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getCountries, getName } from '../../actions';
 import style from './searchBar.module.css';

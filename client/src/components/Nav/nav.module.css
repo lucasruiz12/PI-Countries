@@ -24,16 +24,16 @@
   
   .link {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0);
-    background-size: 100%;
+    color: white;
+    background-color: transparent;
     padding-left: 0.5%;
     padding-right: 0.5%;
     border-radius: 5%;
+    box-shadow: none;
   }
   .link:hover {
-    background-color: #fff;
-    transition: 0.7s;
-    color: rgba(255, 255, 255, 0);
+    border: 1px #000000 solid;
+    box-shadow: none;
   }
   .sortContainer {
     display: flex;
@@ -65,37 +65,68 @@
     display: inline-block;
     padding: 0.35em 1.2em;
     border: 0.1em solid #838383;
-    margin: 0 0.3em 0.3em 0;
+    margin: 1em 0.3em 0.3em 0;
     border-radius: 1em;
     text-decoration: none;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     text-align: center;
     transition: all 0.2s;
-    font-size: small;
-    margin-top: 0.3em;
+    font-size: larger;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
-  
   .butn:hover {
-    color: #000000;
-    background-color: #8a8a8a;
+    transform: scale(1.1);
   }
   
   .link2 {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    background-size: 100%;
+    color: white;
+    background-color: transparent;
     padding-left: 0.5%;
     padding-right: 0.5%;
     border-radius: 5%;
-    align-items: baseline;
+    box-shadow: none;
   }
   .link2:hover {
-    background-color: #fff;
-  
-    color: rgba(255, 255, 255, 0);
-    transition: 0.7s;
+    border: 1px #000000 solid;
+    box-shadow: none;
+  }
+  .butn2 {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #838383;
+    margin: 0em 0.3em 0.3em 0;
+    border-radius: 2em;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    transition: all 0.2s;
+    font-size: larger;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+  .butn2:hover {
+    transform: scale(1.1);
   }
 
-
-  /* //logo en link y link2 */
+  .buttonSearch{
+    display: inline-block;
+    padding:0.5em 1.2em ;
+    border:0.1em solid #838383;
+    margin:0.5em 0.3em 0.3em 0;
+    border-radius:1em;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    text-align:center;
+    transition: all 0.2s;
+    font-size: small;   
+  }
+  
+.buttonSearch:hover{
+  color: #000000;
+  background-color: #8a8a8a;
+}

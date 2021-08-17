@@ -101,8 +101,8 @@ const ActivityForm = () => {
   return (
     <div>
       <div className={style.navBarContainer}>
-      <button className={style.butn}>
-                <Link className={style.link} to="/home" >Volver atrás ◀</Link></button>
+        <button className={style.butn}>
+          <Link className={style.link} to="/home" >Volver atrás ◀</Link></button>
         <form className={style.navBarContainer} onSubmit={(e) => submitForm(e)}>
           <div>
             <input
@@ -210,20 +210,20 @@ const ActivityForm = () => {
       <div className={style.order}>
         {filtered.length < 30
           ? filtered.map((el) => (
-              <div className={style.countryCont}>
-                <div>
-                  <SmallCountry key={el.id} name={el.name} img={el.img} />
-                  <button
-                    className={style.btn}
-                    onClick={setIdHandler}
-                    value={el.id}
-                    name="countryID"
-                  >
-                    AGREGAR
-                  </button>
-                </div>
+            <div className={style.countryCont}>
+              <div>
+                <SmallCountry key={el.id} name={el.name} img={el.img} />
+                <button
+                  className={style.btn}
+                  onClick={setIdHandler}
+                  value={el.id}
+                  name="countryID"
+                >
+                  AGREGAR
+                </button>
               </div>
-            ))
+            </div>
+          ))
           : console.log("Error!")}
       </div>
     </div>

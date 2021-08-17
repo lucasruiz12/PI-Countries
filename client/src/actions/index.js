@@ -57,7 +57,7 @@ export function orderContinent(payload) {
     };
 };
 
-export function showActivity(payload){
+export function showActivity(payload) {
     return {
         type: 'SHOW_ACTIVITY',
         payload

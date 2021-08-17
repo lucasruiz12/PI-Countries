@@ -32,12 +32,12 @@ const Countries = () => {
             <button onClick={nextPage} className={style.btn}>{'➡'}</button>
             <div className={style.grid}>
                 {filterCountries.map((el) => (
-                        <CountryCard
-                            id={el.id}
-                            img={el.img}
-                            name={el.name}
-                            continent={el.continent} />
-                    ))}
+                    <CountryCard
+                        id={el.id}
+                        img={el.img}
+                        name={el.name}
+                        continent={el.continent} />
+                ))}
             </div>
         </div>
     );

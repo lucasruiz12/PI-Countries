@@ -1,4 +1,4 @@
-import {ordAZ, ordPop} from '../components/Orders/orders'
+import { ordAZ, ordPop } from '../components/Orders/orders'
 
 const initialState = {
     countries: [],

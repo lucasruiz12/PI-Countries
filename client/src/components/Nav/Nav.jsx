@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import style from './nav.module.css';
 import { connect, useDispatch } from 'react-redux';
 import {
@@ -26,7 +26,7 @@ const NavBar = ({
     const [continent, setContinent] = useState("");
     const [activity, setActivity] = useState("");
     const dispatch = useDispatch();
-    
+
 
     useEffect(() => {
         if (continent) {
@@ -65,8 +65,12 @@ const NavBar = ({
 
     return (
         <div className={style.navBarContainer}>
-            <button className={style.butn}>
-                <Link to="/" >Volver atrás ◀</Link></button>
+            <Link to="/" >
+                <button className={style.butn}>
+                    Inicio
+                    ◀
+                </button>
+            </Link>
             <div className={style.sortContainer}>
                 <p>Ordenar por:</p>
                 <select onChange={(event) => setOrder(event.target.value)}>
@@ -83,7 +87,8 @@ const NavBar = ({
                 <div className={style.selectContainer}>
                     <select onChange={(event) => {
                         console.log(event.target.value);
-                        setContinent(event.target.value)}
+                        setContinent(event.target.value)
+                    }
                     }>
 
                         <option value="all">Todos</option>
@@ -106,15 +111,15 @@ const NavBar = ({
                         value={activity}
                         onChange={activityHandler}
                     />
-                    <button className={style.butn} onClick={searchActHandler}>
+                    <button className={style.buttonSearch} onClick={searchActHandler}>
                         Buscar 🔎
                     </button>
                 </form>
             </div>
 
-            <Link to="/activities" className={style.link2}>
-                <p className={style.textact}>CREA UNA ACTIVIDAD TURÍSTICA</p>
-            </Link>
+            <button className={style.butn2}>
+                <Link to="/activities" className={style.link2}>CREA UNA ACTIVIDAD TURÍSTICA</Link>
+            </button>
         </div>
     );
 };
