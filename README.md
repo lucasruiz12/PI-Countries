@@ -1,7 +1,7 @@
 # Proyecto individual - Countries
 
 <p align="left">
-  <img height="200" src="./client/src/images/LandingPage.png" />
+  <img height="300" src="./client/src/images/LandingPage.png" />
 </p>
 
 
