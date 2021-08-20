@@ -7,7 +7,7 @@
 
 ## Bienvenidos a mi proyecto individual
 
-Este proyecto fue desarrollado por mí durante la etapa de P.I en Henry tras finalizar los 4 módulos del bootcamp de estudios.
+Este proyecto fue desarrollado por mí durante la etapa de P.I. en Henry tras finalizar los 4 módulos del bootcamp de estudios.
 Se planteó como objetivo principal afirmar y conectar los conceptos aprendidos hasta el momento. Además, se buscó implementar mejores prácticas.
 Haciendo una vista rápida y general, podemos notar que la página contiene países de todo el mundo, información sobre los mismos y la posibilidad de, cual bitácora, agregarle actividades turísticas al país que se desee.
 Se utilizaron distintas tecnologías para realizar el trabajo en su totalidad, desarrollando base de datos, back-end y front-end. 
