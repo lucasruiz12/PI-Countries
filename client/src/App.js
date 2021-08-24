@@ -4,6 +4,7 @@ import LandingPage from './components/LandingPage/LandingPage';
 import Home from './components/Home/Home';
 import Activities from './components/Activity/activities';
 import CountryId from './components/Countries/CountryId';
+import NotFound from './components/NotFound/NotFound';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getCountries } from './actions';
@@ -23,6 +24,7 @@ function App() {
           <Route exact path='/home' component={Home} />
           <Route path="/activities" component={Activities} />
           <Route exact path="/countries/:id" component={CountryId} />
+          <Route path="*" component={NotFound} />
         </Switch>
       </div>
     </BrowserRouter>
