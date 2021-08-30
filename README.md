@@ -42,6 +42,7 @@ Se desarrolló un servidor en Node/Express con los métodos GET y POST en divers
 ### Front-end
 
 Todos los componentes fueron realizados con CSS puro, sin uso de librerías externas.
+
 Se desarrolló una aplicación de React/Redux con: 
 
 __Pagina inicial / Landing page__: posee la imagen característica del trabajo y un botón de ingreso.
