@@ -8,6 +8,7 @@
 ## Bienvenidos a mi proyecto individual
 
 Este proyecto fue desarrollado por mí durante la etapa de P.I. en Henry tras finalizar los 4 módulos del bootcamp de estudios.
+Se trata de una SPA (Single Page Application).
 Se planteó como objetivo principal afirmar y conectar los conceptos aprendidos hasta el momento. Además, se buscó implementar mejores prácticas.
 Haciendo una vista rápida y general, podemos notar que la página contiene países de todo el mundo, información sobre los mismos y la posibilidad de, cual bitácora, agregarle actividades turísticas al país que se desee.
 Se utilizaron distintas tecnologías para realizar el trabajo en su totalidad, desarrollando base de datos, back-end y front-end. 
@@ -40,6 +41,7 @@ Se desarrolló un servidor en Node/Express con los métodos GET y POST en divers
 
 ### Front-end
 
+Todos los componentes fueron realizados con CSS puro, sin uso de librerías externas.
 Se desarrolló una aplicación de React/Redux con: 
 
 __Pagina inicial / Landing page__: posee la imagen característica del trabajo y un botón de ingreso.
